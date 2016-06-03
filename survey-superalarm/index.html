@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>index</title>
+    <!--[if IE]><script>document.write('<base href="' + location.protocol + '//' + location.host + location.pathname.replace(/\/[^\/]*$/, '/mobile/') + '"/>')</script><![endif]-->
+    <base href="mobile/">
+    <script id="DC_baseScript">if(navigator.userAgent.indexOf('AppleWebKit/') == -1) document.write('<base href="' + location.protocol + '//' + location.host + location.pathname.replace(/\/[^\/]*$/, '/mobile/') + '"/>')</script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.6">
+    <meta name="apple-mobile-web-app-capable" content="YES">
+    <link rel="apple-touch-icon" href="Images/WebClipIcon.png">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="Parts/parts.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div id="content">
+      {% if email %}
+      <p>Welcome, {{userEmail}}</p>
+        {% endif %}
+        <div id="introPanel" style="background-color: rgb(255, 127, 80);">
+            <div id="logo"><img src="../Images/logo.png" id="inner_image"></div>
+            <div id="introduction"></div>
+        </div>
+        <div class="triangle-down">
+        </div>
+        <form action="/survey" method="post" id="form">
+            <select id="popup" name="specialty">
+                <option>Select specialty...</option>
+                <option>Anesthesiology</option>
+                <option>Cardiology</option>
+                <option>Critical care</option>
+                <option>Dermatology</option>
+                <option>Diabetes and endocrinology</option>
+                <option>Emergency medicine</option>
+                <option>Family medicine</option>
+                <option>Gastroenterology</option>
+                <option>General Surgery</option>
+                <option>HIV/ID</option>
+                <option>Internal Medicine</option>
+                <option>Nephrology</option>
+                <option>Neurology</option>
+                <option>Nurse</option>
+                <option>Ob/Gyn and women's health</option>
+                <option>Oncology</option>
+                <option>Ophthalmology</option>
+                <option>Orthopedics</option>
+                <option>Pathology</option>
+                <option>Pediatrics</option>
+                <option>Plastic surgery</option>
+                <option>Psychiatry and mental health</option>
+                <option>Pulmonary medicine</option>
+                <option>Radiology</option>
+                <option>Rheumatology</option>
+                <option>Urology</option>
+            </select>
+            <input type="submit" name="Save" value="Take survey" id="submit">
+        </form></div>
+    <div id="footer"></div>
+</body>
+</html>

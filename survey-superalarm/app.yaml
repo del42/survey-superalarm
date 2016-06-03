@@ -1,0 +1,28 @@
+application: survey-superalarm
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: no
+
+
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+- url: /mobile
+  static_dir: mobile
+- url: /Parts
+  static_dir: Parts
+- url: /Images
+  static_dir: Images
+
+
+- url: .*
+  script: main.py
+
+
+
+
+
+
